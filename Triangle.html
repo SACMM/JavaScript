@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipus de Triangle</title>
+    <script>
+        function comprovarTriangle() {
+            var costat1 = parseInt(prompt("Introdueix el primer costat:"));
+            var costat2 = parseInt(prompt("Introdueix el segon costat:"));
+            var costat3 = parseInt(prompt("Introdueix el tercer costat:"));
+            if (costat1 > 0 && costat2 > 0 && costat3 > 0) {
+                var tipus;
+                if (costat1 === costat2 && costat2 === costat3) {
+                    tipus = "El triangle es equilater.";
+                } else if (costat1 === costat2 || costat1 === costat3 || costat2 === costat3) {
+                    tipus = "El triangle es isosceles.";
+                } else {
+                    tipus = "El triangle es escale.";
+                }
+                alert(tipus);
+            } else {
+                alert("Introdueix uns costats valids, perfa uwu.");
+            }
+        }
+    </script>
+</head>
+<body onload="comprovarTriangle();">
+</body>
+</html>

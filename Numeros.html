@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat de Números</title>
+    <script>
+        function mostrarNumeros() {
+            var numero = parseInt(prompt("Introdueix un numero enter positiu:"));
+            if (numero > 0) {
+                var resultat = "";
+                for (var i = numero - 1; i >= 0; i--) {
+                    resultat += i + "<br>";
+                }
+                document.getElementById("resultat").innerHTML = resultat;
+            } else {
+                alert("Introdueix un numero enter positiu.");
+            }
+        }
+    </script>
+</head>
+<body onload = "mostrarNumeros()";>
+    <h1>Llistat de Números Menors</h1>
+    <div id="resultat"></div>
+</body>
+</html>
