@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprovació del boto</title>
+</head>
+<body>
+    <h2>Comprovar el boto</h2>
+    <form id="comForm">
+        <label for="com">Boto: </label>
+        <input type="text" id="boto" name="boto">
+        <button type="button" onclick="comprovarBOTO()">Comprovar boto</button>
+    </form>
+    <script>
+        function comprovarBOTO() {
+            let boto = document.getElementById("boto").value;
+            if (boto === "") {
+                alert("El camp del boto no pot estar buit.");
+            } else {
+                alert("Has introduit contingut en el boto: " + boto);
+            }
+        }
+    </script>
+</body>
+</html>

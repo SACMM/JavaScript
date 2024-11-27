@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buida formulari al focus</title>
+</head>
+<body>
+
+    <h2>Formulari d'exemple</h2>
+
+    <form id="formulari">
+        <label for="nom">Nom: </label>
+        <input type="text" id="nom" name="nom">
+        <br><br>
+
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email">
+        <br><br>
+
+        <label for="dni">DNI: </label>
+        <input type="text" id="dni" name="dni">
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function buidarAlFocus() {
+            var elements = document.querySelectorAll('input[type="text"]');
+            
+            elements.forEach(function(element) {
+                element.addEventListener('focus', function() {
+                    element.value = "";
+                });
+            });
+        }
+        window.onload = buidarAlFocus;
+    </script>
+</body>
+</html>

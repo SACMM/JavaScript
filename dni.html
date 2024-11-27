@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprovació del DNI</title>
+</head>
+<body>
+    <h2>Comprova el teu DNI</h2>
+    <form id="dniForm">
+        <label for="dni">DNI: </label>
+        <input type="text" id="dni" name="dni">
+        <button type="button" onclick="comprovarDNI()">Comprovar</button>
+    </form>
+    <script>
+        function comprovarDNI() {
+            let dni = document.getElementById("dni").value;
+            if (dni === "") {
+                alert("El camp DNI no pot estar buit.");
+            } else {
+                alert("DNI introduït correctament: " + dni);
+            }
+        }
+    </script>
+</body>
+</html>

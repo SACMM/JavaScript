@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari i Mostrar Dades</title>
+</head>
+<body>
+
+    <h2>Formulari de Contacte</h2>
+    <form id="formulari">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom"><br><br>
+
+        <label for="cognom">Cognom:</label>
+        <input type="text" id="cognom" name="cognom"><br><br>
+
+        <label for="email">Correu electrònic:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="missatge">Missatge:</label>
+        <textarea id="missatge" name="missatge"></textarea><br><br>
+
+        <button type="button" onclick="mostrarDades()">Mostrar</button>
+    </form>
+
+    <script>
+        function mostrarDades() {
+            const nom = document.getElementById("nom").value;
+            const cognom = document.getElementById("cognom").value;
+            const email = document.getElementById("email").value;
+            const missatge = document.getElementById("missatge").value;
+            alert("Nom: " + nom + "\nCognom: " + cognom + "\nCorreu electrònic: " + email + "\nMissatge: " + missatge);
+        }
+    </script>
+</body>
+</html>

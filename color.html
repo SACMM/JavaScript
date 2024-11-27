@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canviar color del botó al passar el ratolí</title>
+</head>
+<body>
+
+    <h2>Exemple de canviar color del text dels botons</h2>
+
+    <button id="btn1">Botó 1</button>
+    <button id="btn2">Botó 2</button>
+    <button id="btn3">Botó 3</button>
+
+    <script>
+        function canviarColorBlau() {
+            var botons = document.querySelectorAll('button');
+            botons.forEach(function(boton) {
+                boton.addEventListener('mouseover', function() {
+                    boton.style.color = 'blue';
+                });
+                boton.addEventListener('mouseout', function() {
+                    boton.style.color = '';
+                });
+            });
+        }
+        window.onload = canviarColorBlau;
+    </script>
+</body>
+</html>
