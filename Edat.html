@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprovar Edat</title>
-</head>
-<body>
-    Introdueix la edat: <input type="text" id="edatInput"> 
-    <button onclick="comprovarEdat()">Comprovar</button>
-    <script>
-        function comprovarEdat() {
-            let edat = document.getElementById("edatInput").value;
-            if (edat >= 18) {
-                document.write("Eres major de edat.");
-            } else {
-                document.write("No eres major de edat.");
-            }
-        }
-    </script>
-</body>
-</html>
+function comprovarEdat() {
+    let edat = document.getElementById("edatInput").value;
+    if (edat >= 18) {
+        document.write("Eres major de edat.");
+    } else {
+        document.write("No eres major de edat.");
+    }
+}
