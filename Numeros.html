@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llistat de numeros</title>
-</head>
-<body>
-    <h1>Llistat de numeros menors</h1>
-    <script>
-        function mostrarNumeros() {
-            let numero = parseInt(prompt("Introdueix un numero enter positiu:"));
-            if (numero > 0) {
-                let resultat = "";
-                for (let i = numero - 1; i >= 0; i--) {
-                    resultat += i + "<br>";
-                }
-                document.write(resultat);
-            } else {
-                document.write("Introdueix un numero enter positiu.");
-            }
+function mostrarNumeros() {
+    let numero = parseInt(prompt("Introdueix un numero enter positiu:"));
+    if (numero > 0) {
+        let resultat = "";
+        for (let i = numero - 1; i >= 0; i--) {
+            resultat += i + "<br>";
         }
-        mostrarNumeros();
-    </script>
-</body>
-</html>
+        document.write(resultat);
+    } else {
+        document.write("Introdueix un numero enter positiu.");
+    }
+}
+
+mostrarNumeros();
